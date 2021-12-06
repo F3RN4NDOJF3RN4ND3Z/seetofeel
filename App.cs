@@ -142,10 +142,11 @@ namespace SeeToFeelXP
 
             if (inHand)
             {
-                Log.Info("In hand");
-                syrenge.AnimCompletion = 0;
+                if (syrenge.AnimTime > 0)
+                {
+                    syrenge.AnimTime -= 0.01f;
+                }
             }
-
 
 
             ShowHistoryWindow(ref displayHistory);
